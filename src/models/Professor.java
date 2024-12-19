@@ -1,9 +1,11 @@
+package models;
+
 public class Professor {
     private String name;
     private String department;
     private int experience;
 
-    public Professor(String name, String department, int experience) {
+    public void setData(String name, String department, int experience) {
         this.name = name;
         this.department = department;
         this.experience = experience;

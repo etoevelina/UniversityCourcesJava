@@ -1,14 +1,14 @@
+package models;
+
 import java.util.ArrayList;
 
 public class University {
     private String universityName;
-    private ArrayList<Course> courses;
-    private ArrayList<Professor> professors;
+    private ArrayList<Course> courses = new ArrayList<>();
+    private ArrayList<Professor> professors =  new ArrayList<>();
 
-    public University(String universityName) {
+    public void addUniversity(String universityName) {
         this.universityName = universityName;
-        this.courses = new ArrayList<>();
-        this.professors = new ArrayList<>();
     }
 
     public void addCourse(Course course) {
@@ -20,7 +20,7 @@ public class University {
     }
 
     public void displayUniversityDetails() {
-        System.out.println("University Name: " + universityName);
+        System.out.println("models.University Name: " + universityName);
         System.out.println("Courses Offered:");
         for (Course course : courses) {
             course.displayCourseInfo();

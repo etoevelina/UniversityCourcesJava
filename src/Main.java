@@ -1,12 +1,24 @@
+import models.Course;
+import models.Professor;
+import models.University;
+
 public class Main {
     public static void main(String[] args) {
-        Course course1 = new Course("CS101", "Introduction to Programming", 3);
-        Course course2 = new Course("CS102", "Data Structures", 4);
 
-        Professor professor1 = new Professor("Dr. Alice", "Computer Science", 10);
-        Professor professor2 = new Professor("Dr. Bob", "Mathematics", 8);
+        Course course1 = new Course();
+        Course course2 = new Course();
 
-        University university = new University("Tech University");
+        course1.setData("CS102", "Data Structures", 4);
+        course2.setData("CS102", "Data Structures", 4);
+
+        Professor professor1 = new Professor();
+        Professor professor2 = new Professor();
+
+        professor1.setData("Dr. Alice", "Computer Science", 10);
+        professor2.setData("Dr. Bob", "Mathematics", 8);
+
+        University university = new University();
+        university.addUniversity("Tech University");
 
         university.addCourse(course1);
         university.addCourse(course2);
@@ -16,7 +28,7 @@ public class Main {
         university.displayUniversityDetails();
 
         System.out.println("\nComparing two courses:");
-        System.out.println("Course 1 and Course 2 are " +
+        System.out.println("models.Course 1 and models.Course 2 are " +
                 (course1.getCourseCode().equals(course2.getCourseCode()) ? "the same" : "different"));
     }
 }
